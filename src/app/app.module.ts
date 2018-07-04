@@ -12,9 +12,8 @@ import { PokemonesComponent } from './components/pokemones/pokemones.component';
 const routes: Routes = [
   { path: 'pokemones', component: PokemonesComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: '', component: InicioComponent, pathMatch: 'full' },
-  { path: '', component: InicioComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '/inicio', pathMatch: 'full' }
+  { path: '', redirectTo: 'inicio' , pathMatch: 'full' },
+  { path: '**', redirectTo: 'inicio', pathMatch: 'full' }
 ];
 
 @NgModule({
