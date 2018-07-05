@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 // Enrutamiento
 import { RouterModule, Routes } from '@angular/router';
 // F_Enrutamiento
+
+// Servicios
+import {PokemonesService} from '../app/services/pokemones.service';
+// F_Servicios
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -28,7 +32,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    PokemonesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
