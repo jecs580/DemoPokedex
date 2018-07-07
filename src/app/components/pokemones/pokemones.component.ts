@@ -9,9 +9,8 @@ export class PokemonesComponent implements OnInit {
 
   pokemon: any[] = [];
   constructor( private _serviciopoke: PokemonesService) {
-    console.log( this._serviciopoke);
+
     this.pokemon = _serviciopoke.obtenerpokemon();
-    console.log( this.pokemon );
    }
 
   ngOnInit() {

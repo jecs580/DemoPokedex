@@ -12,10 +12,12 @@ import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PokemonesComponent } from './components/pokemones/pokemones.component';
+import { PokemoninfoComponent } from './components/pokemoninfo/pokemoninfo.component';
 
 const routes: Routes = [
   { path: 'pokemones', component: PokemonesComponent },
   { path: 'inicio', component: InicioComponent },
+  { path: 'pokeinfo/:id', component: PokemoninfoComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full'},
   { path: '**', redirectTo: 'inicio', pathMatch: 'full' }
 ];
@@ -26,7 +28,8 @@ const routes: Routes = [
     CabeceraComponent,
     FooterComponent,
     InicioComponent,
-    PokemonesComponent
+    PokemonesComponent,
+    PokemoninfoComponent
   ],
   imports: [
     BrowserModule,

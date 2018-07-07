@@ -4,10 +4,10 @@
 <div class="row">
   <div class="col-md-3 mb-4" *ngFor="let pokemon of pokemon">
     <div class="list-group">
-      <a class="list-group-item list-group-item-action">
+      <a class="list-group-item list-group-item-action" [routerLink]="['/pokeinfo',pokemon.id]">
         <img class="img-responsive text-center1" src="../../../assets/img/{{pokemon.imagen}}" alt="">
       </a>
-      <a class="list-group-item list-group-item-action active text-center">
+      <a class="list-group-item list-group-item-action active text-center" [routerLink]="['/pokeinfo']">
          {{pokemon.nombre}}
         </a>
     </div>
