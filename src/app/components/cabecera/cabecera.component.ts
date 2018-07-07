@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../../node_modules/@angular/router';
+
 
 @Component({
   selector: 'app-cabecera',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  constructor( private ruta: Router) { }
 
   ngOnInit() {
   }
-
+buscarPoke(termino: string) {
+  console.log(termino);
+  this.ruta.navigate(['pokemonserch', termino]);
+}
 }

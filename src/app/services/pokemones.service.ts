@@ -63,4 +63,16 @@ export class PokemonesService {
     }
     return pokeArr;
   }
+  BuscadaPoke(cadena: String) {
+    // tslint:disable-next-line:prefer-const
+    let Arrbuscado = [];
+    cadena = cadena.toUpperCase();
+    for ( const item of this.pokemon) {
+      const nombre  = item.nombre.toUpperCase();
+      if (nombre.indexOf(cadena) > 0) {
+        Arrbuscado.push(item);
+      }
+    }
+    return Arrbuscado;
+  }
 }

@@ -9,15 +9,14 @@ import {PokemonesService} from '../../services/pokemones.service';
 })
 export class PokemoninfoComponent implements OnInit {
 
-  pokemon: any[] = [];
-
+  pokemoninfo: any[] = [];
   constructor(
     private ruta: ActivatedRoute,
     private _serviciopoke: PokemonesService
   ) {
       this.ruta.params.subscribe(params => {
-        this.pokemon = this._serviciopoke.obtenerpokemonx(params['id']);
-        console.log(this.pokemon);
+        this.pokemoninfo = this._serviciopoke.obtenerpokemonx(params['id']);
+        console.log(this.pokemoninfo);
       });
   }
 
