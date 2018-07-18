@@ -35,7 +35,7 @@ export class PokemonesService {
     },
     {
       id : 5,
-      nombre: 'Picachu',
+      nombre: 'Pikachu',
       imagen: '05.png',
       tipo: 'electrico',
       descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, aut'
@@ -63,16 +63,18 @@ export class PokemonesService {
     }
     return pokeArr;
   }
-  BuscadaPoke(cadena: String) {
+  buscarPokemon(termino: string) {
     // tslint:disable-next-line:prefer-const
-    let Arrbuscado = [];
-    cadena = cadena.toUpperCase();
-    for ( const item of this.pokemon) {
-      const nombre  = item.nombre.toUpperCase();
-      if (nombre.indexOf(cadena) > 0) {
-        Arrbuscado.push(item);
+    let pokeArr = [];
+    termino = termino.toUpperCase();
+    // tslint:disable-next-line:prefer-const
+    for ( let item of this.pokemon) {
+      // tslint:disable-next-line:prefer-const
+      let nombre  = item.nombre.toUpperCase();
+      if (nombre.indexOf(termino) >= 0) {
+        pokeArr.push(item);
       }
     }
-    return Arrbuscado;
+    return pokeArr;
   }
 }

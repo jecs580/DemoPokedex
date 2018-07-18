@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'pokemones', component: PokemonesComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'pokeinfo/:id', component: PokemoninfoComponent },
-  { path: 'pokemonserch/:name', component: PokebuscadoComponent},
+  { path: 'buscar/:nombre', component: PokebuscadoComponent},
   { path: '', redirectTo: 'inicio', pathMatch: 'full'},
   { path: '**', redirectTo: 'inicio', pathMatch: 'full' }
 ];
